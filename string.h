@@ -28,6 +28,8 @@ public:
 	friend bool operator==(const String &s1, const String &s2);
 	friend ostream & operator<<(ostream &os, const String &s);
 	friend istream & operator>>(istream &is, String &s);
+
+	static int HowMany();
 };
 
 #endif
