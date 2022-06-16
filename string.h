@@ -1,6 +1,7 @@
 #ifndef STRING
 #define STRING
 #include <iostream>
+
 using std::ostream;
 using std::istream;
 

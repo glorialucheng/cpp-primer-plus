@@ -18,45 +18,45 @@ using namespace std;
 // }
 int main()
 {
-	String s1;
-	cout << "enter your string: ";
-	cin >> s1;
-	cout << "your string is " << s1 << endl;
+	// String s1;
+	// cout << "enter your string: ";
+	// cin >> s1;
+	// cout << "your string is " << s1 << endl;
 
-	String ss[10];
-	cout << "used " << String::HowMany() << " strings" << endl;
+	// String ss[10];
+	// cout << "used " << String::HowMany() << " strings" << endl;
 
-	char temp[20];
-	int i;
-	for (i = 0; i < 10; ++i) {
-		cout << i+1 << ": ";
-		cin.get(temp, 20);
-		while(cin && cin.get() != '\n') continue;
-		if(!cin || temp[0]=='\0') 
-			break;
-		else
-			ss[i] = temp;
-	}
-	int total = i;
-	if (total > 0) {
-		for (i = 0; i < total; ++i) 
-			cout << ss[i][0] << ": " << ss[i] << endl;
-		int shortest = 0;
-		int first = 0;
-		for (i = 0; i < total; ++i) {
-			if(ss[i].length() < ss[shortest].length())
-				shortest = i;
-			if(ss[i] < ss[first])
-				first = i;
-		}
+	// char temp[20];
+	// int i;
+	// for (i = 0; i < 10; ++i) {
+	// 	cout << i+1 << ": ";
+	// 	cin.get(temp, 20);
+	// 	while(cin && cin.get() != '\n') continue;
+	// 	if(!cin || temp[0]=='\0') 
+	// 		break;
+	// 	else
+	// 		ss[i] = temp;
+	// }
+	// int total = i;
+	// if (total > 0) {
+	// 	for (i = 0; i < total; ++i) 
+	// 		cout << ss[i][0] << ": " << ss[i] << endl;
+	// 	int shortest = 0;
+	// 	int first = 0;
+	// 	for (i = 0; i < total; ++i) {
+	// 		if(ss[i].length() < ss[shortest].length())
+	// 			shortest = i;
+	// 		if(ss[i] < ss[first])
+	// 			first = i;
+	// 	}
 
-		cout << "shortest = " << ss[shortest] << endl;
-		cout << "first = " << ss[first] << endl;
-		cout << "used " << String::HowMany() << " strings" << endl;
+	// 	cout << "shortest = " << ss[shortest] << endl;
+	// 	cout << "first = " << ss[first] << endl;
+	// 	cout << "used " << String::HowMany() << " strings" << endl;
 
-		/* code */
-	} else
-		cout << "No input! \n";
+	// 	/* code */
+	// } else
+	// 	cout << "No input! \n";
 	
 
 	// {
