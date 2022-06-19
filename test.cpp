@@ -5,7 +5,8 @@
 // #include "mytime.h"
 // #include "stonewt.h"
 // #include "mystring.h"
-#include "string.h"
+// #include "string.h"
+#include "brass.h"
 
 using namespace std;
 
@@ -16,8 +17,19 @@ using namespace std;
 // void callme2(Mystring s) {
 // 	cout << "value function: " << s << endl;
 // }
-int main()
-{
+int main() {
+
+	// Brass *b = new Brass("Jack", 2300);
+	Brass *bp = new Brassplus("Tony", 3400);
+	// b->show();
+	bp->show();
+
+	// Brass *point = bp;
+	// point->show();
+
+	// delete b;
+	delete bp;
+
 	// String s1;
 	// cout << "enter your string: ";
 	// cin >> s1;
