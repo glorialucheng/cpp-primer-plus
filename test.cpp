@@ -6,7 +6,8 @@
 // #include "stonewt.h"
 // #include "mystring.h"
 // #include "string.h"
-#include "brass.h"
+// #include "brass.h"
+#include "acctabc.h"
 
 using namespace std;
 
@@ -19,16 +20,44 @@ using namespace std;
 // }
 int main() {
 
+	AcctABC *list[3];
+	list[0] = new Brass("Jack", 31724434, 2300.0);
+	list[1] = new Brassplus("Tony", 23858734, 4520.5, 1000, 0.14);
+	list[2] = new Brass("Rose", 24563513, 1200.0);
+
+	for (int i = 0; i < 3; ++i) {
+		list[i]->viewAcct();
+		cout << endl;
+	}
+
+	list[1]->withdraw(4800);
+	list[1]->viewAcct();
+	cout << endl;
+
+	list[0]->deposit(200);
+	list[0]->viewAcct();
+	cout << endl;
+
+	list[2]->withdraw(2100);
+
+
+
+
+	for (int i = 0; i < 3; ++i)
+		delete list[i];
+
+
+
 	// Brass *b = new Brass("Jack", 2300);
-	Brass *bp = new Brassplus("Tony", 3400);
+	// Brass *bp = new Brassplus("Tony", 3400);
 	// b->show();
-	bp->show();
+	// bp->show();
 
 	// Brass *point = bp;
 	// point->show();
 
 	// delete b;
-	delete bp;
+	// delete bp;
 
 	// String s1;
 	// cout << "enter your string: ";
