@@ -8,6 +8,8 @@
 // #include "string.h"
 // #include "brass.h"
 // #include "acctabc.h"
+#include "workermi.h"
+#include <cstring>
 
 using namespace std;
 
@@ -19,7 +21,61 @@ using namespace std;
 // 	cout << "value function: " << s << endl;
 // }
 
+// class Base
+// {
+// public:
+// 	Base() {}
+// 	~Base() {}
+// 	virtual void say() {
+// 		cout << "hello, at Base" << endl;
+// 	}
+	
+// };
+
+// class Extend : private Base
+// {
+// public:
+// 	Extend() {}
+// 	~Extend() {}
+// 	virtual void say() {
+// 		cout << "hello, at Extend" << endl;
+// 	}
+	
+// };
+
 int main() {
+
+	Worker *ws[3];
+	int ct;
+	for (ct = 0; ct < 3; ct++) {
+		char choice;
+		cout << "enter type: \n" << "w: waiter  s: singer  t: sw  q: quit\n";
+		cin >> choice;
+		if (choice == 'q')
+			break;
+		switch(choice) {
+			case 'w': ws[ct] = new Waiter(); break;
+			case 's': ws[ct] = new Singer(); break;
+			case 't': ws[ct] = new SW(); break;
+		}
+		cin.get();
+		ws[ct]->set();
+	}
+
+	cout << "\n your workers: \n";
+	for (int i = 0; i < ct; ++i) {
+		cout << endl;
+		ws[i]->show();
+	}
+	for (int i = 0; i < ct; ++i)
+		delete ws[i];
+
+	// Extend *e = new Extend();
+	// e->say();
+	// Base *b = (Base *) (new Extend());
+	// b->say();
+
+	// delete e;
 
 	// AcctABC *list[3];
 	// list[0] = new Brass("Jack", 31724434, 2300.0);
