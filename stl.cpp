@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
 #include <algorithm>
 
 using namespace std;
@@ -19,11 +20,20 @@ using namespace std;
 
 int main() {
 
-	
+	std::map<int, string> map;
+	map[1] = string("111");
+	map[2] = string("222");
+	map.insert(pair<int, string>(3, "333"));
+	auto a = map.find(3);
+	cout << a->second;
 
 	// vector<int> vi = {1,2,3,4,5,6};
-	// for (auto e : vi)
+	// for (int e : vi)
 	// 	cout << e << endl;
+	
+	// for (std::vector<int>::iterator e = vi.begin(); e != vi.end(); e++)
+	// 	cout << *e << endl;
+	
 	// vector<string> vs;
 	// string temp;
 	// while (cin >> temp && temp != "quit") {

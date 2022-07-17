@@ -8,8 +8,9 @@
 // #include "string.h"
 // #include "brass.h"
 // #include "acctabc.h"
-#include "workermi.h"
-#include <cstring>
+// #include "workermi.h"
+// #include <cstring>
+// #include <string>
 
 using namespace std;
 
@@ -43,32 +44,92 @@ using namespace std;
 	
 // };
 
+// class INT {
+// friend ostream& operator<< (ostream &os, INT i) {
+// 	os << "[" << i.value << "]" << endl;
+// 	return os; 
+// }
+// private:
+// 	int value;
+// public:
+// 	INT(int i = 0) : value(i) {}
+// 	INT& operator++() {  // ++INT
+// 		cout << "++INT" << endl;
+// 		this->value++;
+// 		return *this;
+// 	}
+
+// 	const INT operator++(int) {  // INT++
+// 		cout << "INT++" << endl;
+// 		INT temp = this->value;
+// 		this->value++;
+// 		return temp;
+// 	}
+// };
+
+// class Age {
+// private:
+// 	int age;
+// public:
+// 	Age(int a = 0) : age(a) {}
+// 	void operator() (int n) {
+// 		for (int i = 0; i < n; ++i)
+// 			cout << "my age = " << this->age << endl;
+// 	}
+// };
+
 int main() {
 
-	Worker *ws[3];
-	int ct;
-	for (ct = 0; ct < 3; ct++) {
-		char choice;
-		cout << "enter type: \n" << "w: waiter  s: singer  t: sw  q: quit\n";
-		cin >> choice;
-		if (choice == 'q')
-			break;
-		switch(choice) {
-			case 'w': ws[ct] = new Waiter(); break;
-			case 's': ws[ct] = new Singer(); break;
-			case 't': ws[ct] = new SW(); break;
-		}
-		cin.get();
-		ws[ct]->set();
-	}
+	// Age(20)(4);
 
-	cout << "\n your workers: \n";
-	for (int i = 0; i < ct; ++i) {
-		cout << endl;
-		ws[i]->show();
-	}
-	for (int i = 0; i < ct; ++i)
-		delete ws[i];
+	// INT a = 4;
+	// cout << a;
+	// a++;  // C++规定，后缀版本的自增运算符调用函数符为operator++(int)的函数，而前缀版本则调用函数符为operator++()的函数
+	// cout << a;
+	// ++a;
+	// cout << a;
+
+	// double a = 1.37;
+	// cout.precision(2);
+	// cout << a;
+
+	// cerr << "cerr" << endl;
+	// clog << "clog" << endl;
+
+	// string s = "asdf";
+	// cout << "s = " + s + "\n";
+	// string ss;
+	// cin >> s >> ss;
+	// cout << "s = " + s + "\n" + "ss = " + ss + "\n";
+	// cin.get();
+	// getline(cin, ss);
+	// cout << ss;
+
+
+	// Worker *ws[3];
+	// int ct;
+	// for (ct = 0; ct < 3; ct++) {
+	// 	char choice;
+	// 	cout << "enter type: \n" << "w: waiter  s: singer  t: sw  q: quit\n";
+	// 	cin >> choice;
+	// 	if (choice == 'q')
+	// 		break;
+	// 	switch(choice) {
+	// 		case 'w': ws[ct] = new Waiter(); break;
+	// 		case 's': ws[ct] = new Singer(); break;
+	// 		case 't': ws[ct] = new SW(); break;
+	// 	}
+	// 	cin.get();
+	// 	ws[ct]->set();
+	// }
+
+	// cout << "\n your workers: \n";
+	// for (int i = 0; i < ct; ++i) {
+	// 	cout << endl;
+	// 	ws[i]->show();
+	// }
+	// for (int i = 0; i < ct; ++i)
+	// 	delete ws[i];
 
 	// Extend *e = new Extend();
 	// e->say();

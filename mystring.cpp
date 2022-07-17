@@ -1,6 +1,6 @@
 #include "mystring.h"
 #include <iostream>
-#include "string.h"
+#include "cstring"
 
 int Mystring::strings = 0;
 

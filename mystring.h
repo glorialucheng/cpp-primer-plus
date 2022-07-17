@@ -15,7 +15,7 @@ public:
 	Mystring(const Mystring &s);
 	Mystring & operator=(const Mystring &s);
 
-	friend std::ostream & operator<<(std::ostream &os, const Mystring &str);
+friend std::ostream & operator<<(std::ostream &os, const Mystring &str);
 	
 };
 #endif
