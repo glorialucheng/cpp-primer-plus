@@ -25,7 +25,7 @@ int main() {
 	map[2] = string("222");
 	map.insert(pair<int, string>(3, "333"));
 	auto a = map.find(3);
-	cout << a->second;
+	cout << a->second << endl;
 
 	// vector<int> vi = {1,2,3,4,5,6};
 	// for (int e : vi)
